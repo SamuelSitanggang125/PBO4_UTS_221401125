@@ -1,4 +1,4 @@
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/d618f810-e92f-4529-91a2-a9110267bba3)# PBO4_UTS_221401125
+# PBO4_UTS_221401125
 UTS PBO4
 
 Jadi didalam program ini terdapat 2 kelas yaitu BankAccount dan juga BankSystem. Didalam BankAccount terdapat beberapa atribut yaitu:
