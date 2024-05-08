@@ -2,12 +2,19 @@
 UTS PBO4
 
 Jadi didalam program ini terdapat 2 kelas yaitu BankAccount dan juga BankSystem. Didalam BankAccount terdapat beberapa atribut yaitu:
+
 • nama (String) 
+
 • alamat (String) 
+
 • nomor_telepon (String) 
+
 • nomor_akun (String) 
+
 • saldo (int) 
+
 • tanggal_registrasi (LocalDateTime) 
+
 Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/4ff52802-4e4d-45d0-a6a0-bf3a50eab884)
 
