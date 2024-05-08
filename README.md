@@ -9,13 +9,7 @@ Jadi didalam program ini terdapat 2 kelas yaitu BankAccount dan juga BankSystem.
 • saldo (int) 
 • tanggal_registrasi (LocalDateTime) 
 Program:
-public class BankAccount {
-    private String nama;
-    private String alamat;
-    private String nomor_telepon;
-    private String nomor_akun;
-    private int saldo;
-    private LocalDateTime tanggal_registrasi;
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/4ff52802-4e4d-45d0-a6a0-bf3a50eab884)
 
 terdapat konstruktor:
     public BankAccount(String nama, String alamat, String nomor_telepon, int saldo) {
