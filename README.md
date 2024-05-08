@@ -23,14 +23,23 @@ terdapat konstruktor:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/590b348b-09ba-4f18-94a9-4c8d8c0c8bd2)
 
 nama: Parameter untuk menyimpan nama pemilik akun.
+
 alamat: Parameter untuk menyimpan alamat pemilik akun.
+
 nomor_telepon: Parameter untuk menyimpan nomor telepon pemilik akun.
+
 saldo: Parameter untuk menyimpan saldo awal dalam akun.
+
 this.nama = nama;: Menginisialisasi atribut nama dari objek BankAccount dengan nilai yang diterima dari parameter nama.
+
 this.alamat = alamat;: Menginisialisasi atribut alamat dari objek BankAccount dengan nilai yang diterima dari parameter alamat.
+
 this.nomor_telepon = nomor_telepon;: Menginisialisasi atribut nomor_telepon dari objek BankAccount dengan nilai yang diterima dari parameter nomor_telepon.
+
 this.nomor_akun = generateNomorAkun();: Memanggil method generateNomorAkun() dan menyimpan hasilnya ke atribut nomor_akun dari objek BankAccount.
+
 this.saldo = saldo;: Menginisialisasi atribut saldo dari objek BankAccount dengan nilai saldo awal yang diterima dari parameter saldo.
+
 this.tanggal_registrasi = LocalDateTime.now();: Menginisialisasi atribut tanggal_registrasi dari objek BankAccount dengan waktu saat ini menggunakan LocalDateTime.now().
 
 program:
@@ -48,79 +57,128 @@ program:
 
 Metode transfer menerima satu parameter jumlahTransfer yang merupakan jumlah uang yang akan ditransfer. Sebelum melakukan transfer, metode ini melakukan dua validasi:
 1. jumlahTransfer > 0: Pastikan jumlahTransfer adalah nilai positif.
+   
 2. saldo >= jumlahTransfer: Pastikan saldo akun saat ini cukup untuk melakukan transfer sejumlah jumlahTransfer.
+   
 Jika kedua kondisi validasi terpenuhi, maka jumlahTransfer akan dikurangkan dari saldo akun saat ini (saldo -= jumlahTransfer;), yang menandakan bahwa transfer telah berhasil dilakukan. Jika salah satu dari kedua validasi di atas tidak terpenuhi, metode akan mencetak pesan error "Transfer failed. Insufficient balance or invalid amount.", yang menunjukkan bahwa transfer tidak dapat dilakukan karena saldo tidak mencukupi atau jumlah transfer tidak valid.
 
 Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/54554b30-63cd-4e05-bb85-f29c5495fc16)
 
 Metode ini digunakan untuk menampilkan:
+
 nama: Nama pemilik akun.
+
 alamat: Alamat pemilik akun.
+
 nomor_telepon: Nomor telepon pemilik akun.
+
 nomor_akun: Nomor unik akun yang digenerate secara acak.
+
 saldo: Jumlah saldo dalam akun.
+
 tanggal_registrasi: Tanggal dan waktu saat akun diregistrasi.
 
+
 Lalu, program ini juga memiliki kelas BankSystem yang memiliki beberapa Method:
+
 1. Show Menu
+   
 2. RegisterAccount
+   
 3. TransferMoney
+   
 4. DepositMoney
+   
 5. CheckAccountInfo
 
 Program ShowMenu:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/a27c5bb9-059f-457b-a324-b4883b987c8d)
 
 Metode showMenu() membantu dalam mengelola antarmuka pengguna dan menjalankan fungsi-fungsi yang sesuai berdasarkan pilihan pengguna. Metode menggunakan struktur switch untuk menentukan aksi yang sesuai berdasarkan kode pilihan yang dimasukkan oleh pengguna. Berikut adalah fungsi yang dilakukan berdasarkan kode pilihan:
+
 Kode 1 (case 1): Memanggil method registerAccount() untuk mendaftarkan akun baru.
+
 Kode 2 (case 2): Memanggil method transferMoney() untuk mentransfer uang antar akun.
+
 Kode 3 (case 3): Memanggil method depositMoney() untuk menyimpan uang ke dalam akun.
+
 Kode 4 (case 4): Memanggil method checkAccountInfo() untuk mengecek informasi rekening.
+
 Kode 5 (case 5): Mengakhiri program dengan mencetak pesan "Exiting Banking System..." dan keluar dari method showMenu().
+
 
 program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/0dea675a-164d-45ca-92e0-27a76f945ab8)
 
 1. Meminta Input Data:
-Pengguna diminta untuk memasukkan nama dan alamat mereka menggunakan scanner.nextLine() untuk membaca input teks dari konsol.
-Kemudian, metode meminta pengguna untuk memasukkan nomor telepon dengan batasan maksimum 14 digit. Sebuah loop do-while digunakan untuk memastikan bahwa nomor telepon yang dimasukkan adalah bilangan bulat dan tidak melebihi panjang 14 digit.
+   
+Pengguna diminta untuk memasukkan nama dan alamat mereka menggunakan scanner.nextLine() untuk membaca input teks dari konsol.Kemudian, metode meminta pengguna untuk memasukkan nomor telepon dengan batasan maksimum 14 digit. Sebuah loop do-while digunakan untuk memastikan bahwa nomor telepon yang dimasukkan adalah bilangan bulat dan tidak melebihi panjang 14 digit.
+
 2. Validasi Nomor Telepon:
+
 Dalam loop do-while, metode melakukan validasi pada nomor telepon yang dimasukkan. Jika nomor telepon tidak berupa bilangan bulat atau melebihi 14 digit, pesan kesalahan akan ditampilkan dan pengguna diminta untuk memasukkan ulang nomor telepon yang valid.
+
 3. Memasukkan Saldo Awal:
+   
 Pengguna diminta untuk memasukkan saldo awal akun dengan menggunakan scanner.nextInt(). Metode ini akan mengonsumsi karakter newline setelah mengambil input untuk mencegah masalah bacaan input berikutnya.
+
 4. Membuat Akun Baru:
+   
 Setelah semua informasi yang diperlukan dimasukkan, sebuah objek BankAccount baru dibuat menggunakan data yang telah dimasukkan oleh pengguna. Objek BankAccount ini kemudian ditambahkan ke dalam ArrayList accounts yang menyimpan semua akun yang terdaftar.
+
 5. Menampilkan Informasi Akun:
+   
 Setelah akun berhasil didaftarkan, metode mencetak informasi lengkap tentang akun baru yang telah didaftarkan, termasuk semua atribut seperti nama, alamat, nomor telepon, nomor akun, saldo, dan tanggal registrasi. Informasi akun dicetak menggunakan method showDescription() dari objek BankAccount yang baru saja dibuat.
+
 
 Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/d4383c1e-20ed-4772-9bd8-a95002383e11)
 
 1. Memasukkan Nomor Akun Pengirim:
+   
 Pengguna diminta untuk memasukkan nomor akun pengirim menggunakan scanner.nextLine() untuk membaca input teks dari konsol. Metode kemudian mencari akun pengirim dengan nomor akun yang dimasukkan menggunakan method findAccount(). Jika akun pengirim tidak ditemukan, pesan kesalahan "Invalid sender account number." akan ditampilkan, dan metode akan keluar.
+
 2. Memasukkan Nomor Akun Penerima:
+
 Pengguna diminta untuk memasukkan nomor akun penerima menggunakan scanner.nextLine(). Metode mencari akun penerima dengan nomor akun yang dimasukkan menggunakan method findAccount(). Jika akun penerima tidak ditemukan, pesan kesalahan "Invalid recipient account number." akan ditampilkan, dan metode akan keluar.
+
 3. Memasukkan Jumlah Uang yang Akan Ditransfer:
+   
 Pengguna diminta untuk memasukkan jumlah uang yang akan ditransfer menggunakan scanner.nextInt(). Setelah itu, scanner.nextLine() digunakan untuk mengonsumsi karakter newline agar tidak terjadi masalah bacaan input selanjutnya.
+
 4. Validasi Saldo Pengirim:
+
 Metode melakukan validasi untuk memastikan bahwa akun pengirim memiliki saldo yang mencukupi untuk transfer sejumlah uang yang diminta. Jika saldo pengirim kurang dari jumlah yang akan ditransfer, pesan kesalahan "Insufficient balance in sender's account." akan ditampilkan, dan metode akan keluar.
+
 5. Melakukan Transfer:
+    
 Jika validasi saldo berhasil, metode akan melanjutkan untuk melakukan transfer dana antar akun. Panggilan senderAccount.transfer(amount) digunakan untuk mengurangi saldo akun pengirim sebesar jumlah yang ditransfer. Panggilan recipientAccount.topUp(amount) digunakan untuk menambah saldo akun penerima sebesar jumlah yang ditransfer.
+
 6. Menampilkan Detail Transaksi:
+    
 Setelah transfer berhasil dilakukan, metode mencetak detail transaksi, termasuk informasi akun pengirim dan penerima, jumlah transfer, dan waktu transaksi menggunakan LocalDateTime.now().
+
 
 Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/d6a32c15-9362-4bad-bfd9-dfee9858be05)
 
 1. Memasukkan Nomor Akun:
+   
 Pengguna diminta untuk memasukkan nomor akun menggunakan scanner.nextLine() untuk membaca input teks dari konsol. Metode kemudian mencari akun berdasarkan nomor akun yang dimasukkan menggunakan method findAccount(). Jika akun tidak ditemukan, pesan kesalahan "Invalid account number." akan ditampilkan, dan metode akan keluar.
+
 2. Memasukkan Jumlah Uang yang Akan Disimpan:
+   
 Pengguna diminta untuk memasukkan jumlah uang yang akan disimpan menggunakan scanner.nextInt().Setelah itu, scanner.nextLine() digunakan untuk mengonsumsi karakter newline agar tidak terjadi masalah bacaan input selanjutnya.
+
 3. Melakukan Deposit:
+   
 Metode melakukan penambahan saldo akun (top-up) dengan memanggil account.topUp(amount) untuk menambah saldo akun sesuai dengan jumlah uang yang dimasukkan. Setelah deposit berhasil, pesan "Deposit successful." akan ditampilkan.
+
 4. Menampilkan Informasi Transaksi:
+   
 Metode mencetak informasi transaksi deposit, termasuk nomor akun, saldo terbaru setelah deposit, dan waktu transaksi menggunakan LocalDateTime.now().
+
 
 Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/51b521a9-b158-4307-8cf1-17aee97a4119)
