@@ -109,7 +109,7 @@ Kode 5 (case 5): Mengakhiri program dengan mencetak pesan "Exiting Banking Syste
 
 
 program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/0dea675a-164d-45ca-92e0-27a76f945ab8)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/05ff8f53-84d0-461f-b939-48782402945f)
 
 1. Meminta Input Data:
    
