@@ -161,7 +161,7 @@ Setelah transfer berhasil dilakukan, metode mencetak detail transaksi, termasuk 
 
 
 Program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/d6a32c15-9362-4bad-bfd9-dfee9858be05)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/15cc4861-cda2-4f6e-8a99-8c482baab214)
 
 1. Memasukkan Nomor Akun:
    
@@ -181,27 +181,27 @@ Metode mencetak informasi transaksi deposit, termasuk nomor akun, saldo terbaru 
 
 
 Program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/51b521a9-b158-4307-8cf1-17aee97a4119)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/70356189-cb39-4f69-9cf6-4f0fbcf5950c)
 
 Pengguna diminta untuk memasukkan nomor akun dengan menggunakan scanner.nextLine() untuk membaca input dari pengguna. Metode findAccount(accountNumber) dipanggil untuk mencari akun berdasarkan nomor akun yang dimasukkan. Jika akun tidak ditemukan (nilai kembalian null), program akan mencetak pesan "Invalid account number." karena nomor akun yang dimasukkan tidak valid. Jika akun ditemukan (nilai kembalian tidak null), program akan mencetak informasi lengkap mengenai akun tersebut. Informasi yang dicetak termasuk nama, alamat, nomor telepon, nomor akun, saldo, dan tanggal registrasi. Informasi ini diperoleh dengan memanggil account.showDescription(), yang akan mencetak detail akun sesuai dengan format yang telah ditentukan.
 
 Program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/4eb62104-6310-45ab-8a29-5050c478bed1)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/1c755c84-8509-4d95-ad16-cae3cfb6a1f5)
 
 Metode findAccount(String accountNumber) adalah sebuah private method yang digunakan untuk mencari objek BankAccount dalam ArrayList accounts berdasarkan nomor akun (accountNumber) yang diberikan. Metode ini menggunakan perulangan for-each untuk iterasi melalui setiap objek BankAccount dalam ArrayList. Pada setiap iterasi, metode memeriksa apakah nomor akun dari objek saat ini cocok dengan accountNumber yang dicari. Jika ditemukan, metode mengembalikan objek BankAccount, dan jika tidak ditemukan, metode mengembalikan null. Metode ini membantu dalam operasi perbankan seperti transfer uang, menyimpan uang, dan memeriksa informasi rekening dengan cara mudah mencari akun berdasarkan nomor akun yang diberikan.
 
 program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/37e3cac6-dd87-4b0a-8980-6dd07700ffe1)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/8a471c79-9fd7-4bc1-8e13-df6ca3d57f1c)
 
 digunakan untuk memvalidasi nomor telepon saat registrasi akun baru. Nomor telepon harus berupa bilangan bulat, dan validasi ini membantu memastikan bahwa input yang dimasukkan sesuai dengan format yang diharapkan. Jika nomor telepon tidak dapat diubah menjadi bilangan bulat atau panjangnya melebihi batas, maka registrasi akan meminta input ulang.
 
 program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/de4c3b52-daee-436d-8d1f-4b49949601d4)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/0912f68f-322d-4007-9e66-b8a70b3933a9)
 
 Fungsi isNumeric(String str) ini digunakan dalam kelas BankingSystem untuk validasi, seperti pada saat memeriksa nomor telepon yang dimasukkan saat registrasi akun. Validasi ini memastikan bahwa nomor telepon yang dimasukkan hanya terdiri dari digit numerik untuk memenuhi format yang diharapkan.
 
 
 Program:
-![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/f4c266e1-3e97-4d6c-bfa8-5b575ec854ba)
+![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/711a274f-c710-48da-ba40-6a57b5fdc5d0)
 
-Objek BankingSystem baru (bankingSystem) dibuat. Ini akan menginisialisasi program perbankan dengan membuat instance dari kelas BankingSystem. Metode showMenu() dipanggil pada objek bankingSystem. Ini akan menampilkan menu program dan memungkinkan pengguna untuk memilih operasi yang ingin dilakukan. Pada blok catch (Exception e), jika terjadi kesalahan selama eksekusi program, pesan kesalahan (dalam bentuk teks) akan ditangkap dan dicetak menggunakan System.out.println(e.getMessage()). Ini membantu dalam pemecahan masalah saat terjadi kesalahan yang tidak terduga selama eksekusi program
+Objek BankingSystem baru (bankingSystem) dibuat. Ini akan menginisialisasi program perbankan dengan membuat instance dari kelas BankingSystem. Metode showMenu() dipanggil pada objek bankingSystem. Ini akan menampilkan menu program dan memungkinkan pengguna untuk memilih operasi yang ingin dilakukan. Pada blok catch (Exception e), jika terjadi kesalahan selama eksekusi program, pesan kesalahan (dalam bentuk teks) akan ditangkap dan dicetak menggunakan System.out.println(e.getMessage()).
