@@ -12,6 +12,7 @@ Program:
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/4ff52802-4e4d-45d0-a6a0-bf3a50eab884)
 
 terdapat konstruktor:
+
 ![image](https://github.com/SamuelSitanggang125/PBO4_UTS_221401125/assets/115195417/590b348b-09ba-4f18-94a9-4c8d8c0c8bd2)
 
 nama: Parameter untuk menyimpan nama pemilik akun.
